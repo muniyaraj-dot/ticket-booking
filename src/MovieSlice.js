@@ -20,7 +20,7 @@ const movieSlice = createSlice({
         const userIndex = movie.bookedUsers.findIndex(user => user.userName === userName && user.userPassword === userPassword);
         if (userIndex !== -1) {
           
-          movie.bookedUsers[userIndex].seats = [...new Set([...movie.bookedUsers[userIndex].seats, ...selectedSeats])]; // Avoid duplicates
+          movie.bookedUsers[userIndex].seats = [...new Set([...movie.bookedUsers[userIndex].seats, ...selectedSeats])];
         } else {
 
           movie.bookedUsers.push({
